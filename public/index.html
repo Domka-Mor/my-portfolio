@@ -24,11 +24,107 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/8cc5957ab6.js" crossorigin="anonymous"></script>
+    
+    <title>DM</title>
+
+    <style>
+      .preloader{
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        filter: url(#gooey);
+        overflow: hidden;
+      }
+      .preloader .circles{
+        position: relative;
+        top: 40%;
+        left: 0%;
+        transform: translate(-50%,-50%);
+        min-width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: #fff;
+      }
+
+      .preloader .circles:before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 50%;
+        background: #fff;
+        z-index: -1;
+        filter: blur(50px);
+      }
+
+      .preloader .circles.circles1,
+      .preloader .circles.circles1:before{
+        background: linear-gradient(90deg,#f00,#0ff);
+      }
+
+      .preloader .circles.circles2,
+      .preloader .circles.circles2:before{
+        background: linear-gradient(90deg,#ffeb3b,#da00ff);
+      }
+
+      .preloader .circles.circles1{
+        animation: anime1 3s linear infinite;
+      }
+
+      @keyframes anime1 {
+        0% {transform: translateX(-100px) rotate(0deg);}
+        30% {transform: translateX(250px) rotate(240deg);}
+        60% {transform: translateX(250px) rotate(480deg);}
+        100% {transform: translateX(-100px) rotate(720deg);}
+      }
+
+      .preloader .circles.circles2{
+        animation: anime2 3s linear infinite;
+      }
+
+      @keyframes anime2 {
+        0% {transform: translateX(100px) rotate(0deg);}
+        30% {transform: translateX(-250px) rotate(-240deg);}
+        60% {transform: translateX(-250px) rotate(-480deg);}
+        100% {transform: translateX(100px) rotate(-720deg);}
+      }
+
+      svg{
+        width: 0;
+        height: 0;
+      }
+    </style>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+      <div class='preloader'>                 
+        <div class='circles circles1'></div>       
+        <div class='circles circles2'></div>                              
+        <svg>
+          <filter id='gooey'>
+            <feGaussianBlur in='SourceGraphic' stdDeviation='10' />
+            <feColorMatrix values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 20 -10
+            "/>
+          </filter>
+        </svg>  
+      </div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

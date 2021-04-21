@@ -1,0 +1,369 @@
+/*Projects main*/
+.projects{
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding-left: 11rem;
+}
+
+/*Hexagon*/
+.container3 {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: animate 4s linear infinite;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+}
+
+.container3 .projects-main{
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 4em;
+  font-weight: 600;
+  text-align: center;
+  z-index: 10;
+  margin-top: 5rem;
+  width: 20rem;
+  height: 3rem;
+  color: #fff;
+}
+.projects-main span{
+  color: #863C66;
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  margin: 1px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 2s;
+}
+
+.hexagon:hover {
+  transition: 0s;
+  background: #0f0;
+}
+
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.row3 {
+  display: inline-flex;
+  margin-top: -32px;
+  margin-left: -50px;
+}
+
+.row3:nth-child(even) {
+  margin-left: 1px;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+/*End of Hexagon*/
+
+
+/*Cards Direction*/
+.d2-body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-family: Roboto, sans-serif;
+}
+
+.direction2{
+  width: 950px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+.direction2 .d2-box{
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  overflow: hidden;
+  margin: 0 20px;
+  border: 2px solid #863C66;
+}
+
+.direction2:hover .d2-box{
+  transform: rotateY(25deg);
+}
+
+.direction2 .d2-box:hover ~ .d2-box{
+  transform: rotateY(-25deg);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+
+.direction2 .d2-box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+}
+
+.direction2 .d2-box .d2-imgBox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.direction2 .d2-box .d2-imgBox:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #863C66;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+
+.direction2 .d2-box:hover .d2-imgBox:before{
+  opacity: 1;
+}
+
+.direction2 .d2-box .d2-imgBox .d2-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.direction2 .d2-box .d2-imgBox .d2-img2{
+  position: absolute;
+  top: 13%;
+  left: 0;
+  width: 280px;
+  height: 200px;
+  object-fit: fill;
+}
+
+.direction2 .d2-box .d2-imgBox .d2-img3{
+  position: absolute;
+  top: 10%;
+  width: 280px;
+  height: 210px;
+  object-fit: cover;
+}
+
+.direction2 .d2-box .d2-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.direction2 .d2-box .d2-content .d2-h2{
+  color: #fff;
+  transition: 0.5s;
+  /*text-transform: uppercase;*/
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  transform: translateY(200px);
+}
+
+/*.direction2 .d2-box .d2-content .d2-h2:after{
+  content: '.';
+  color: #863C66;
+  margin-left: 0.3rem;
+  font-size: 2.5rem;
+}*/
+
+.direction2 .d2-box:hover .d2-content .d2-h2{
+  transform: translateY(0px); 
+  transition-delay: 0.6s;
+}
+
+.direction2 .d2-box .d2-content .project-btn{  
+  /*margin-left: 0.5rem;*/
+  margin-left: 0.4rem;
+  transition: 0.5s;
+  transform: translateY(200px);
+}
+
+.direction2 .d2-box:hover .d2-content .project-btn{
+  transform: translateY(0px); 
+  transition-delay: 0.7s;
+}
+/*End of Cards Direction*/
+
+
+/*Learn more button*/
+.project-btn p{
+  margin-top: 10px;
+}
+.project-btn a{
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  width: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  color: #fff;
+}
+
+.project-btn a:hover{
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #863C66;
+  box-shadow: 0 0 10px #863C66, 0 0 40px #863C66, 0 0 80px #863C66;
+  transition-delay: 1s;
+}
+
+.project-btn a span{
+  position: absolute;
+  display: block;
+}
+
+.project-btn a span:nth-child(1){
+  top:0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#863C66);
+}
+
+.project-btn a:hover span:nth-child(1){
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.project-btn a span:nth-child(3){
+  bottom:0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#863C66);
+}
+
+.project-btn a:hover span:nth-child(3){
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.project-btn a span:nth-child(2){
+  top:-100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#863C66);
+}
+
+.project-btn a:hover span:nth-child(2){
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.project-btn a span:nth-child(4){
+  bottom:-100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#863C66);
+}
+
+.project-btn a:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.project-btn:hover {
+ cursor: pointer;
+}
+.project-btn:focus{
+  outline:none;
+}
+/*End of Learn more button*/
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+  .projects{
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .direction2{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+  }
+  .direction2 .d2-box{
+    margin: 1rem 0;
+  }
+  .direction2:hover .d2-box{
+    transform: none;
+  }
+  .direction2 .d2-box:hover{
+    transform: none;
+  }
+  .direction2 .d2-box:hover ~ .d2-box{
+    transform: none;
+  }
+  .direction2:hover .d2-box{
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container3 .projects-main{
+    font-size: 3em;
+    margin-top: 6rem;
+  }
+}
+/*End of Responsive*/

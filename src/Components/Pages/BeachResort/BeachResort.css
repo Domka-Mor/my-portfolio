@@ -1,0 +1,296 @@
+/*BeachResort main*/
+.parallax2-body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Roboto', sans-serif; 
+}
+
+.parallax2-container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+}
+
+.parallax2-container .parallax2-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	scroll-snap-align: start;
+}
+
+.parallax2-container .parallax2-section:nth-child(1){
+	background: url(../../../Images/BeachResort-logo.png);
+	background-size: auto 80%;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax2-container .parallax2-section:nth-child(2){
+	background: url(../../../Images/BeachResort-main.png);
+	background-size: auto 100%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax2-container .parallax2-section:nth-child(3){
+	background: url(../../../Images/BeachResort-Book.png);
+	background-size: auto 90%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax2-container .parallax2-section:nth-child(4){
+	background: url(../../../Images/BeachResort-Bookings.png);
+	background-size: auto 90%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax2-container .parallax2-section .parallax2-content{
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	max-width: 700px;
+	z-index: 15;
+}
+
+.parallax2-container .parallax2-section .parallax2-content .parallax2-h2{
+	background: linear-gradient(90deg,#ffeb3b,#da00ff);
+	color: #000;
+	font-weight: 800;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 2rem;
+	border-radius: 15px;
+}
+
+.parallax2-container .parallax2-section .parallax2-content .parallax2-p{
+	background: #fff;
+	color: #000;
+	font-weight: 600;
+	padding: 10px 20px;
+	font-size: 1.3rem;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+
+.parallax2-container .parallax2-section .parallax2-content .parallax2-p span:before{
+	content: '•';
+	padding: 0.5rem;
+  	font-size: 1.5rem;
+	color: #e757b5;
+}
+
+.parallax-btn2{
+	position: absolute;
+	top: 3rem;
+	right: 5rem;
+	z-index: 10;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.parallax-btn2:hover{
+	text-decoration: none;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.links2 {
+  position: fixed;
+  bottom: 0;
+  right: 5rem;
+  display: grid;
+  font-size: 2rem;
+  z-index: 10;
+  color: #fff;
+}
+.links2 a{
+  color: #fff;
+}
+.links2 i:hover{
+  text-decoration: none;
+  color: #863C66;
+}
+.links2 i{
+  margin:  0.8rem 0;
+}
+.links2 p{
+  border: 1px solid #fff;
+  height: 7rem;
+  width: 0;
+  margin-top: 0.8rem;
+  margin-left: 0.9rem;
+  margin-bottom: 0;
+}
+/*End of BeachResort main*/
+
+/*Responsive*/
+@media screen and (max-width: 1400px) {
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-h2{
+		font-size: 1.5rem;
+	}
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-p{
+		font-size: 1.1rem;
+		font-weight: 800;
+	}
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-p span:before{
+		content: '•';
+		padding: 0.3rem;
+	  	font-size: 1.2rem;
+	}
+	.parallax-btn2, .links2{
+		font-size: 1.5rem;
+		right: 3rem;
+	}
+	.parallax-btn2:hover{
+		font-size: 1.5rem;
+	}
+	.links2 p{
+	  margin-left: 0.6rem;
+	  height: 5rem;
+	}
+	.parallax2-container .parallax2-section .parallax2-content{
+		max-width: 520px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-h2{
+		font-size: 1rem;
+	}
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-p{
+		font-size: 0.8rem;
+		font-weight: 800;
+		margin-top: 5px;
+	}
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-p span:before{
+		content: '•';
+		padding: 0.4rem;
+	  	font-size: 0.6rem;
+	}
+	.parallax-btn2{
+		right: 2rem;
+		top: 2rem;
+		font-size: 1.7rem;
+	}
+	.parallax-btn2:hover{
+		font-size: 1.7rem;
+	}
+	.links2{
+		position: absolute;
+		display: flex;
+		width: auto;
+		height: 2rem;
+		top: 2rem;
+		left: 2rem;
+	}
+	.links2 i{
+	  margin: 0.3rem 1rem 0 0;
+	}
+	.links2 p{
+	  display: none;
+	}
+	.parallax2-container .parallax2-section .parallax2-content{
+		position: relative;
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-h2{
+		font-size: 0.8rem;
+	}
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-p{
+		font-size: 0.6rem;
+		font-weight: 800;
+		margin-top: 5px;
+	}
+	.parallax2-container .parallax2-section .parallax2-content .parallax2-p span:before{
+		content: '•';
+		padding: 0.2rem;
+	  	font-size: 0.5rem;
+	}
+	.parallax-btn2{
+		right: 2rem;
+		top: 2rem;
+		font-size: 1.2rem;
+	}
+	.parallax-btn2:hover{
+		font-size: 1.2rem;
+	}
+	.links2{
+		position: absolute;
+		display: flex;
+		width: auto;
+		height: 2rem;
+		top: 2rem;
+		left: 2rem;
+		font-size: 1rem;
+	}
+	.links2 i{
+	  margin: 0.3rem 1rem 0 0;
+	}
+	.links2 p{
+	  display: none;
+	}
+	.parallax2-container .parallax2-section .parallax2-content{
+		position: relative;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.parallax2-container .parallax2-section:nth-child(3){
+		background-size: 90% auto;
+		background-position: center 30%;
+	}
+	.parallax2-container .parallax2-section:nth-child(4){
+		background-size: 60% auto;
+		background-position: center 30%;
+	}
+	.parallax2-container .parallax2-section:nth-child(1){
+		background-position: center;
+		background-size: auto 50% ;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.parallax2-container .parallax2-section:nth-child(2){
+		background-size: 70% auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.parallax2-container .parallax2-section:nth-child(1){
+		background-position: center 30%;
+		background-size: auto 25% ;
+	}
+	.parallax2-container .parallax2-section:nth-child(3){
+		background-size: 90% auto;
+		background-position: center 30%;
+	}
+	.parallax2-container .parallax2-section:nth-child(4){
+		background-size: 100% auto;
+		background-position: center 40%;
+	}
+	.parallax2-container .parallax2-section:nth-child(2){
+		background-size: 90% auto;
+		background-position: center 40%;
+	}
+}
+/*End of Responsive*/
+

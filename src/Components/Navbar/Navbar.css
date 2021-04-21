@@ -1,0 +1,101 @@
+/*nav-default*/
+.navbar-pinky {
+  font-family: Roboto, sans-serif;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 12rem;
+  z-index: 20000;
+  text-align: center;
+  border-right: 3px solid rgb(15,15,15);
+}
+.navbar-pinky li {
+  position: relative;
+  top: 10%;
+  margin: 10px;
+  padding: 20px 0;
+  list-style: none;
+}
+.navbar-pinky .btn-nav {
+  position: relative;
+  color: none;
+  border-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  line-height: 1.2em;
+}
+.navbar-pinky .btn-nav:hover{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.navbar-pinky .btn-nav:focus{
+  outline: none;
+}
+.navbar-pinky .is-active .btn-nav{
+  color: #000;
+  background: #863C66;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #863C66, 0 0 40px #863C66, 0 0 80px #863C66;
+}
+.navbar-pinky .icon1, .icon2 {
+  font-size: 1.5rem;
+  display: grid;
+  z-index: 1000;
+  color: none;
+}
+.navbar-pinky .icon1:hover, .icon2:hover{
+  color: #863C66;
+}
+/*end of nav-default*/
+
+/*nav-small*/
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #495464;
+}
+.nav-btn:focus {
+  outline: none; 
+}
+.nav-btn:hover {
+  color: #232528;
+}
+.nav-min {
+  width: auto;
+  background: #000;
+}
+.nav-links {
+  position: relative;
+  top: 0;
+  right: 1rem;
+  list-style-type: none;
+  text-align: center;
+}
+.show-nav {
+  height: auto;
+}
+.nav-links1 {
+  height: 0;
+  display: none;
+}
+/*end of nav-small*/
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+  .navbar-pinky{
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    border-right: none;
+  }
+}
+/*End of Responsive*/

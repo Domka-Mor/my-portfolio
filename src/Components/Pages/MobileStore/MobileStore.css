@@ -1,0 +1,324 @@
+/*MobileStore main*/
+.parallax1-body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	font-family: 'Roboto', sans-serif;  
+}
+
+.parallax1-container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+}
+
+.parallax1-container .parallax1-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	scroll-snap-align: start;
+}
+
+.parallax1-container .parallax1-section:nth-child(1){
+	background: url(../../../Images/MobileStore.png);
+	background-size: auto;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax1-container .parallax1-section:nth-child(2){
+	background: url(../../../Images/Mobile-Uvod.png);
+	background-size: auto 100%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;		
+}
+
+.parallax1-container .parallax1-section:nth-child(3){
+	background: url(../../../Images/Mobile-User.png);
+	background-size: auto 80%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax1-container .parallax1-section:nth-child(4){
+	background: url(../../../Images/Mobile-Admin.png);
+	background-size: auto 80%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax1-container .parallax1-section:nth-child(5){
+	background: url(../../../Images/Mobile-Admin-ProductEdit.png);
+	background-size: auto 80%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax1-container .parallax1-section:nth-child(6){
+	background: url(../../../Images/Mobile-AdminNewProduct.png);
+	background-size: auto 80%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax1-container .parallax1-section .parallax1-content{
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	max-width: 700px;
+	z-index: 15;
+}
+
+.parallax1-container .parallax1-section .parallax1-content .parallax1-h2{
+	background: linear-gradient(90deg,#ffeb3b,#da00ff);
+	color: #000;
+	font-weight: 800;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 2rem;
+	border-radius: 15px;
+}
+
+.parallax1-container .parallax1-section .parallax1-content .parallax1-p{
+	background: #fff;
+	color: #000;
+	font-weight: 600;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+
+.parallax1-container .parallax1-section .parallax1-content .parallax1-p span:before{
+	content: '•';
+	padding: 0.5rem;
+  	font-size: 1.5rem;
+	color: #e757b5;
+}
+
+.parallax-btn1{
+	position: absolute;
+	top: 3rem;
+	right: 5rem;
+	z-index: 10;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.parallax-btn1:hover{
+	text-decoration: none;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.links1{
+  position: fixed;
+  bottom: 0;
+  right: 5rem;
+  display: grid;
+  font-size: 2rem;
+  z-index: 10;
+  color: #fff;
+}
+.links1 a{
+  color: #fff;
+}
+.links1 i:hover{
+  text-decoration: none;
+  color: #863C66;
+}
+.links1 i{
+  margin:  0.8rem 0;
+}
+.links1 p{
+  border: 1px solid #fff;
+  height: 7rem;
+  width: 0;
+  margin-top: 0.8rem;
+  margin-left: 0.9rem;
+  margin-bottom: 0;
+}
+/*End of MobileStore main*/
+
+/*Responsive*/
+@media screen and (max-width: 1400px) {
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-h2{
+		font-size: 1.5rem;
+	}
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-p{
+		font-size: 1.1rem;
+		font-weight: 800;
+	}
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-p span:before{
+		content: '•';
+		padding: 0.3rem;
+	  	font-size: 1.2rem;
+	}
+	.parallax-btn1, .links1{
+		font-size: 1.5rem;
+		right: 3rem;
+	}
+	.parallax-btn1:hover{
+		font-size: 1.5rem;
+	}
+	.links1 p{
+	  margin-left: 0.6rem;
+	  height: 5rem;
+	}
+	.parallax1-container .parallax1-section .parallax1-content{
+		max-width: 520px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-h2{
+		font-size: 1rem;
+	}
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-p{
+		font-size: 0.8rem;
+		font-weight: 800;
+		margin-top: 5px;
+	}
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-p span:before{
+		content: '•';
+		padding: 0.4rem;
+	  	font-size: 0.6rem;
+	}
+	.parallax-btn1{
+		right: 2rem;
+		top: 2rem;
+		font-size: 1.7rem;
+	}
+	.parallax-btn1:hover{
+		font-size: 1.7rem;
+	}
+	.links1{
+		position: absolute;
+		display: flex;
+		width: auto;
+		height: 2rem;
+		top: 2rem;
+		left: 2rem;
+	}
+	.links1 i{
+	  margin: 0.3rem 1rem 0 0;
+	}
+	.links1 p{
+	  display: none;
+	}
+	.parallax1-container .parallax1-section .parallax1-content{
+		position: relative;
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-h2{
+		font-size: 0.8rem;
+	}
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-p{
+		font-size: 0.6rem;
+		font-weight: 800;
+		margin-top: 5px;
+	}
+	.parallax1-container .parallax1-section .parallax1-content .parallax1-p span:before{
+		content: '•';
+		padding: 0.2rem;
+	  	font-size: 0.5rem;
+	}
+	.parallax-btn1{
+		right: 2rem;
+		top: 2rem;
+		font-size: 1.2rem;
+	}
+	.parallax-btn1:hover{
+		font-size: 1.2rem;
+	}
+	.links1{
+		position: absolute;
+		display: flex;
+		width: auto;
+		height: 2rem;
+		top: 2rem;
+		left: 2rem;
+		font-size: 1rem;
+	}
+	.links1 i{
+	  margin: 0.3rem 1rem 0 0;
+	}
+	.links1 p{
+	  display: none;
+	}
+	.parallax1-container .parallax1-section .parallax1-content{
+		position: relative;
+		top: 78%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 90%;
+	}
+}
+
+
+
+@media screen and (max-width: 1350px) {
+	.parallax1-container .parallax1-section:nth-child(3){
+		background-size: 95% auto;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.parallax1-container .parallax1-section:nth-child(3), .parallax1-container .parallax1-section:nth-child(4), 
+	.parallax1-container .parallax1-section:nth-child(5), .parallax1-container .parallax1-section:nth-child(6){
+		background-size: 90% auto;
+	}
+	.parallax1-container .parallax1-section:nth-child(1){
+		background-size: auto 70%;
+		background-position: center 5%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.parallax1-container .parallax1-section:nth-child(2){
+		background-size: 80% auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.parallax1-container .parallax1-section:nth-child(1){
+		background-position: center 30%;
+		background-size: auto 60%;
+	}
+	.parallax1-container .parallax1-section:nth-child(2){
+		background-size:  90% auto;
+		background-position: center 40%;
+	}
+	.parallax1-container .parallax1-section:nth-child(3){
+		background-size: 90% auto;
+		background-position: center 30%;
+	}
+	.parallax1-container .parallax1-section:nth-child(4){
+		background-size: 90% auto;
+		background-position: center 30%;
+	}
+	.parallax1-container .parallax1-section:nth-child(5){
+		background-size:  90% auto;
+		background-position: center 30%;
+	}
+	.parallax1-container .parallax1-section:nth-child(6){
+		background-size:  90% auto;
+		background-position: center 30%;
+	}
+}
+/*End of Responsive*/

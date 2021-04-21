@@ -1,0 +1,238 @@
+/*MyPortfolio main*/
+.parallax3-body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Roboto', sans-serif; 
+}
+
+.parallax3-container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+}
+
+.parallax3-container .parallax3-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.parallax3-container .parallax3-section{
+	background: url(../../../Images/portfolio.png);
+	background-size: auto 90%;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.parallax3-container .parallax3-section .parallax3-content{
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	max-width: 700px;
+	z-index: 15;
+}
+
+.parallax3-container .parallax3-section .parallax3-content .parallax3-h2{
+	background: linear-gradient(90deg,#ffeb3b,#da00ff);
+	color: #000;
+	font-weight: 800;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 2rem;
+	border-radius: 15px;
+}
+
+.parallax3-container .parallax3-section .parallax3-content .parallax3-p{
+	background: #fff;
+	color: #000;
+	font-weight: 600;
+	padding: 10px 20px;
+	font-size: 1.3rem;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+
+.parallax3-container .parallax3-section .parallax3-content .parallax3-p span:before{
+	content: '•';
+	padding: 0.5rem;
+  	font-size: 1.5rem;
+	color: #e757b5;
+}
+
+.parallax-btn3{
+	position: absolute;
+	top: 3rem;
+	right: 5rem;
+	z-index: 10;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.parallax-btn3:hover{
+	text-decoration: none;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.links3 {
+  position: fixed;
+  bottom: 0;
+  right: 5rem;
+  display: grid;
+  font-size: 2.3rem;
+  z-index: 10;
+  color: #fff;
+}
+.links3 a{
+  color: #fff;
+}
+.links3 i:hover{
+  text-decoration: none;
+  color: #863C66;
+}
+
+.links3 p{
+  border: 1px solid #fff;
+  height: 7rem;
+  width: 0;
+  margin-top: 0.8rem;
+  margin-left: 1.1rem;
+  margin-bottom: 0;
+}
+/*End of MyPortfolio main*/
+
+/*Responsive*/
+@media screen and (max-width: 1400px) {
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-h2{
+		font-size: 1.5rem;
+	}
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-p{
+		font-size: 1.1rem;
+		font-weight: 800;
+	}
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-p span:before{
+		content: '•';
+		padding: 0.3rem;
+	  	font-size: 1.2rem;
+	}
+	.parallax-btn3, .links3{
+		font-size: 1.8rem;
+		right: 3rem;
+	}
+	.parallax-btn3:hover{
+		font-size: 1.8rem;
+	}
+	.links3 p{
+	  margin-left: 0.8rem;
+	  height: 5rem;
+	}
+	.parallax3-container .parallax3-section .parallax3-content{
+		max-width: 520px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-h2{
+		font-size: 1rem;
+	}
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-p{
+		font-size: 0.8rem;
+		font-weight: 800;
+		margin-top: 5px;
+	}
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-p span:before{
+		content: '•';
+		padding: 0.4rem;
+	  	font-size: 0.6rem;
+	}
+	.parallax-btn3{
+		right: 2rem;
+		top: 2rem;
+	}
+	.links3{
+		position: absolute;
+		display: flex;
+		width: auto;
+		height: 2rem;
+		top: 2rem;
+		left: 2rem;
+	}
+	.links3 i{
+	  margin: 0.3rem 1rem 0 0;
+	}
+	.links3 p{
+	  display: none;
+	}
+	.parallax3-container .parallax3-section .parallax3-content{
+		position: relative;
+		top: 85%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-h2{
+		font-size: 0.8rem;
+	}
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-p{
+		font-size: 0.6rem;
+		font-weight: 800;
+		margin-top: 5px;
+	}
+	.parallax3-container .parallax3-section .parallax3-content .parallax3-p span:before{
+		content: '•';
+		padding: 0.2rem;
+	  	font-size: 0.5rem;
+	}
+	.parallax-btn3{
+		right: 2rem;
+		top: 2rem;
+		font-size: 1.2rem;
+	}
+	.parallax-btn3:hover{
+		font-size: 1.2rem;
+	}
+	.links3{
+		position: absolute;
+		display: flex;
+		width: auto;
+		height: 2rem;
+		top: 2rem;
+		left: 2rem;
+		font-size: 1rem;
+	}
+	.links3 i{
+	  margin: 0.3rem 1rem 0 0;
+	}
+	.links3 p{
+	  display: none;
+	}
+	.parallax3-container .parallax3-section .parallax3-content{
+		position: relative;
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.parallax3-container .parallax3-section{
+		background-size: auto 70%;
+		background-position: center 30%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.parallax3-container .parallax3-section{
+		background-position: center 30%;
+		background-size: auto 45% ;
+	}
+}
+/*End of Responsive*/
+

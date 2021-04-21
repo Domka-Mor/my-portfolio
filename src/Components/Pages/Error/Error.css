@@ -1,0 +1,145 @@
+/*Error main*/
+.error-div{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+}
+.error-div .error{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.error h1{
+	font-size: 8rem;
+	font-weight: 800;
+	color: #863C66;
+}
+.error h2{
+	font-size: 4rem;
+	font-weight: 800;
+	color: #fff;
+}
+/*End of Error main*/
+
+/*Error button*/
+.error-button p{
+  margin-top: 9px;
+  text-transform: capitalize;
+}
+.error-button a{
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 160px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.error-button a:hover{
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  background: #863C66;
+  box-shadow: 0 0 10px #863C66, 0 0 40px #863C66, 0 0 80px #863C66;
+  transition-delay: 1s;
+}
+.error-button a span{
+  position: absolute;
+  display: block;
+}
+.error-button a span:nth-child(1){
+  top:0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#863C66);
+}
+.error-button a:hover span:nth-child(1){
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.error-button a span:nth-child(3){
+  bottom:0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#863C66);
+}
+.error-button a:hover span:nth-child(3){
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.error-button a span:nth-child(2){
+  top:-100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#863C66);
+}
+.error-button a:hover span:nth-child(2){
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.error-button a span:nth-child(4){
+  bottom:-100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#863C66);
+}
+.error-button a:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.error-button:hover {
+ cursor: pointer;
+}
+.error-button:focus{
+  outline:none;
+}
+/*End of Error button*/
+
+/*Responsive*/
+@media screen and (max-width: 600px){
+	.error h1{
+		font-size: 6rem;
+	}
+	.error h2{
+		font-size: 2rem;
+	}
+	.error-button a{
+	  height: 50px;
+	  width: 150px;
+	  font-size: 20px;
+	}
+	.error-button a:hover{
+	  font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.error h1{
+		font-size: 4rem;
+	}
+	.error h2{
+		font-size: 1.5rem;
+	}
+	.error-button a{
+	  height: 45px;
+	  width: 125px;
+	  font-size: 18px;
+	}
+	.error-button a:hover{
+	  font-size: 18px;
+	}
+}
+/*End of Responsive*/

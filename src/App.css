@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+body{
+  background: #000;
 }
 
-.App-logo {
-  height: 40vmin;
+/*page scroll*/
+::-webkit-scrollbar{
+width: 12px;
+}
+
+::-webkit-scrollbar-track{
+background: black;
+}
+
+::-webkit-scrollbar-thumb{
+background: linear-gradient(#ffeb3b,#da00ff);
+border-radius: 6px;
+}
+/*end of pagescroll*/
+
+/*Gsap Overlay*/
+.Home > div , .Contact > div {
+  color: #ff7f82;
+}
+
+.Contact > div {
+  color: #ffa260;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 20;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.load-screen1 {
+  position: relative;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #863C66;
+  width: 100%;
+  height: 0%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Headd {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay-first{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	z-index: 99;
+	background-color: pink;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay-second{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	z-index: 98;
+	background-color: #863C66;
 }
+/*Gsap Overlay*/
+
+

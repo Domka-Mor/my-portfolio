@@ -1,0 +1,345 @@
+/*Blobs*/
+.blob{
+  margin: 0;
+  padding-left: 11rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerBlob{
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  filter: url(#gooey);
+}
+
+.containerBlob .circle{
+  position: relative;
+  min-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.containerBlob .circle:before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.containerBlob .circle.circle1,
+.containerBlob .circle.circle1:before{
+  background: linear-gradient(90deg,#f00,#0ff);
+}
+
+.containerBlob .circle.circle2,
+.containerBlob .circle.circle2:before{
+  background: linear-gradient(90deg,#ffeb3b,#da00ff);
+}
+
+.containerBlob .circle.circle1{
+  animation: animate1 5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {transform: translateX(0) rotate(0deg);}
+  30% {transform: translateX(250px) rotate(240deg);}
+  60% {transform: translateX(250px) rotate(480deg);}
+  100% {transform: translateX(0) rotate(720deg);}
+}
+
+.containerBlob .circle.circle2{
+  animation: animate2 5s linear infinite;
+}
+
+@keyframes animate2 {
+  0% {transform: translateX(0) rotate(0deg);}
+  30% {transform: translateX(-250px) rotate(-240deg);}
+  60% {transform: translateX(-250px) rotate(-480deg);}
+  100% {transform: translateX(0) rotate(-720deg);}
+}
+
+svg{
+  width: 0;
+  height: 0;
+}
+/*End of Blobs*/
+
+/*Hero*/
+.div-hero{
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+}
+
+.hero-text1{
+  position: relative;
+  top: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  z-index: 10000;
+  width: 30rem;
+  height: 7rem;
+}
+
+.hero-text1 h1{
+  font-size: 4em;
+  font-weight: 600;
+}
+
+.hero-text2{
+  position: relative;
+  bottom: 50%;
+  z-index: 10000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 28rem;
+  height: 5rem;
+}
+
+.hero-text2 h1{
+  font-weight: 600;
+}
+
+.bounce{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  font-family: consolas;
+  font-size: 4em;
+  z-index: 10000;
+  width: 45rem;
+  height: 8rem;
+}
+
+.bounce h1{
+  font-size: 150px;
+  font-weight: 700;
+}
+
+.blast:hover {      
+  color: #863C66;
+}
+.dot {      
+  color: #863C66;
+}
+.dot-6{
+  animation: animate10 1s; 
+  color: #863C66;
+  cursor: pointer;
+}
+.bounce-6:hover {      
+  color: #863C66;
+  cursor: pointer;
+}
+.bounce-6{
+  animation: animate10 1s; 
+}
+@keyframes animate10 {
+    from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*End of Hero*/
+
+/*Responsive*/
+@media screen and (max-width: 1700px) {
+  .div-hero{
+    position: relative;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .blob{
+    padding-left: 0;
+  }
+  .containerBlob .circle{
+    min-width: 180px;
+    height: 180px;
+  }
+  @keyframes animate2 {
+    0% {transform: translateX(0) rotate(0deg);}
+    30% {transform: translateX(100px) rotate(240deg);}
+    60% {transform: translateX(100px) rotate(480deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+  }
+  @keyframes animate1 {
+    0% {transform: translateX(0) rotate(0deg);}
+    30% {transform: translateX(-150px) rotate(240deg);}
+    60% {transform: translateX(-150px) rotate(480deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .div-hero{
+    position: relative;
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /*.div-hero{
+    position: relative;
+    left: 20%;
+  }*/
+  .hero-text1{
+    width: 17rem;
+    height: 3rem;
+  }
+  .hero-text2{
+    width: 24rem;
+    height: 3rem;
+  }
+  .bounce{
+    width: 25rem;
+    height: 3rem;
+  }
+  .hero-text1 h1, .hero-text2 h1{
+    font-size: 2.5em;
+  }
+  .bounce h1{
+    font-size: 100px;
+  }
+  .containerBlob .circle{
+    min-width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .div-hero{
+    position: relative;
+    left: 10%;
+  }
+  .hero-text1{
+    width: 12rem;
+    height: 1rem;
+  }
+  .hero-text2{
+    width: 16rem;
+    height: 1rem;
+  }
+  .bounce{
+    width: 15rem;
+    height: 1rem;
+  }
+  .hero-text1 h1, .hero-text2 h1{
+    font-size: 1.7em;
+  }
+  .bounce h1{
+    font-size: 80px;
+  }
+  .containerBlob .circle{
+    min-width: 80px;
+    height: 80px;
+  }
+  @keyframes animate2 {
+    0% {transform: translateX(0) rotate(0deg);}
+    30% {transform: translateX(80px) rotate(240deg);}
+    60% {transform: translateX(80px) rotate(480deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+  }
+  @keyframes animate1 {
+    0% {transform: translateX(0) rotate(0deg);}
+    30% {transform: translateX(-80px) rotate(240deg);}
+    60% {transform: translateX(-80px) rotate(480deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .div-hero{
+    position: relative;
+    left: 10%;
+  }
+  .hero-text1{
+    width: 12rem;
+    height: 1rem;
+  }
+  .hero-text2{
+    width: 15rem;
+    height: 1rem;
+  }
+  .bounce{
+    width: 12rem;
+    height: 1rem;
+  }
+  .hero-text1 h1, .hero-text2 h1{
+    font-size: 1.6em;
+  }
+  .bounce h1{
+    font-size: 60px;
+  }
+  .containerBlob .circle{
+    min-width: 60px;
+    height: 60px;
+  }
+  @keyframes animate2 {
+    0% {transform: translateX(0) rotate(0deg);}
+    30% {transform: translateX(30px) rotate(240deg);}
+    60% {transform: translateX(30px) rotate(480deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+  }
+  @keyframes animate1 {
+    0% {transform: translateX(0) rotate(0deg);}
+    30% {transform: translateX(-50px) rotate(240deg);}
+    60% {transform: translateX(-50px) rotate(480deg);}
+    100% {transform: translateX(0) rotate(720deg);}
+  }
+}
+
+@media screen and (max-width: 360px){
+  .bounce h1{
+    font-size: 50px;
+  }
+  .hero-text1 h1, .hero-text2 h1{
+    font-size: 1.4em;
+  }
+}
+/*End of Responsive*/
