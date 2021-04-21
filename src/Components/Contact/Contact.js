@@ -88,7 +88,7 @@ export default class Contact extends React.Component {
 	onSubmit = (event) => {
 		event.preventDefault();
 
-	  	fetch('http://localhost:3001/send', {
+	  	fetch('https://myportfolio-email-sender.herokuapp.com/send', {
 	      method: "POST",
 	      body: JSON.stringify(this.state),
 	      headers: {
@@ -96,18 +96,24 @@ export default class Contact extends React.Component {
 	        'Content-Type': 'application/json'
 	      },
 	    })
-	    .then(
-	    	(response) => (response.json())
-	    )
-	    .then(
-	    	(response)=> {
-	    	if (response.status === 'success') {
-	      	alert("Message Sent."); 
-	      	this.resetForm()
-    		} else if (response.status === 'fail') {
-      		alert("Message failed to send.")
+	    .then(res => {
+	        if (res.status !== 200 && res.status !== 201) {
+	          throw new Error('Failed!');
+	        }
+	        return res.json();
+	    })
+	    .then(resData => {
+	    	if (resData) {
+	      	alert("Thank you for your message! :)"); 
+	      	console.log('Hi there! :P');
+	      	this.resetForm();
+    		} else{
+      		alert("I'm sad. Message failed to send. Please try again. :( ")
     		}
-	  	})
+	    })
+	  	.catch(err => {
+	        console.log(err);
+	    });  
 	}
 
 
