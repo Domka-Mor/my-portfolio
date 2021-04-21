@@ -88,7 +88,7 @@ export default class Contact extends React.Component {
 	onSubmit = (event) => {
 		event.preventDefault();
 
-	  	fetch('https://myportfolio-email-sender.herokuapp.com/send', {
+	  	fetch('https://portfolio-emailsender.herokuapp.com/send', {
 	      method: "POST",
 	      body: JSON.stringify(this.state),
 	      headers: {
