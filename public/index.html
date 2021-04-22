@@ -103,6 +103,44 @@
         width: 0;
         height: 0;
       }
+
+      @media screen and (max-width: 550px) {
+        .preloader .circles{
+          min-width: 150px;
+          height: 150px;
+        }
+        @keyframes anime1 {
+          0% {transform: translateX(-30px) rotate(0deg);}
+          30% {transform: translateX(200px) rotate(240deg);}
+          60% {transform: translateX(200px) rotate(480deg);}
+          100% {transform: translateX(-30px) rotate(720deg);}
+        }
+        @keyframes anime2 {
+          0% {transform: translateX(30px) rotate(0deg);}
+          30% {transform: translateX(-200px) rotate(-240deg);}
+          60% {transform: translateX(-200px) rotate(-480deg);}
+          100% {transform: translateX(30px) rotate(-720deg);}
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .preloader .circles{
+          min-width: 100px;
+          height: 100px;
+        }
+        @keyframes anime1 {
+          0% {transform: translateX(-30px) rotate(0deg);}
+          30% {transform: translateX(140px) rotate(240deg);}
+          60% {transform: translateX(140px) rotate(480deg);}
+          100% {transform: translateX(-30px) rotate(720deg);}
+        }
+        @keyframes anime2 {
+          0% {transform: translateX(30px) rotate(0deg);}
+          30% {transform: translateX(-140px) rotate(-240deg);}
+          60% {transform: translateX(-140px) rotate(-480deg);}
+          100% {transform: translateX(30px) rotate(-720deg);}
+        }
+      }
     </style>
   </head>
 
