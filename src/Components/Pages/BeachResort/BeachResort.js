@@ -64,7 +64,7 @@ export default function BeachResort() {
 									<p className='parallax2-p'>Demonstration of the hotel website with the room reservation feature.</p>
 									<p className='parallax2-p'> Type : Full-stack</p>
 									<p className='parallax2-p'> Build with :<br/> <span/>React <span/>Bootstrap <span/>styled-components<br/>
-									<span/>Node.js <span/>Express <span/>Graphql <span/>MongoDB</p>
+									<span/>Node.js <span/>Express <span/>GraphQL <span/>MongoDB</p>
 								</div>
 							</div>
 							<div className='parallax2-section'>

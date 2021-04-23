@@ -18,6 +18,14 @@
   padding: 20px 0;
   list-style: none;
 }
+.navbar-pinky li a{
+  color: #863C66;
+}
+.navbar-pinky li a:hover{
+  color: #863C66;
+  text-decoration: none;
+  cursor: pointer;
+}
 .navbar-pinky .btn-nav {
   position: relative;
   color: none;

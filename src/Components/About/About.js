@@ -206,12 +206,15 @@ export default function About() {
 								        <ul className='pr-4'>           
 								            <li>React</li>
 								            <li>JavaScript (ES6+)</li>
-								            <li>HTML & CSS</li>	         
+								            <li>HTML & CSS</li>
+								            <li>Git & GitHub</li>	         
 								        </ul>
 								        <ul>           
 								            <li>Node.js</li>
 								            <li>Express.js</li>
 								            <li>REST & GraphQL</li>
+								            <li>MongoDB</li>
+
 								        </ul>
 							        </div>
 					        	</div>

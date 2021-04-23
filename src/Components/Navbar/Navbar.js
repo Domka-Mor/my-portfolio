@@ -55,8 +55,16 @@ export default class Navbar extends Component {
 								    </NavLink>
 							    </li>
 						  		<span className="navbar-text">
-							  		<li><i className="fab fa-github icon1"></i></li>
-								    <li><i className="fab fa-linkedin icon2"></i></li>
+							  		<li>
+								  		<a href='https://github.com/Domka-Mor'>
+								  			<i className="fab fa-github icon1"></i>
+								  		</a>
+							  		</li>
+							  		<li>
+								  		<a href='https://www.linkedin.com/in/dominika-moravi%C4%8Dov%C3%A1-4b470a210?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRUUGZFhRTZuTSKIsNgvmAQ%3D%3D'>
+								    		<i className="fab fa-linkedin icon2"></i>
+								    	</a>
+							    	</li>
 							    </span>
 						    </ul>
 					    </div>
@@ -68,8 +76,16 @@ export default class Navbar extends Component {
 				    <li><NavLink to='/about' activeClassName='is-active'><button className='btn btn-nav'>About me</button></NavLink></li>
 				    <li><NavLink to='/projects' activeClassName='is-active'><button className='btn btn-nav'>Projects</button></NavLink></li>
 				    <li><NavLink to='/contact' activeClassName='is-active'><button className='btn btn-nav'>Contact</button></NavLink></li>
-			  		<li><i className="fab fa-github icon1 pt-5 mt-5"></i></li>
-				    <li><i className="fab fa-linkedin icon2"></i></li>
+			  		<li>
+				  		<a href='https://github.com/Domka-Mor'>
+				  			<i className="fab fa-github icon1 pt-5 mt-5"></i>
+				  		</a>
+			  		</li>
+			  		<li>
+				  		<a href='https://www.linkedin.com/in/dominika-moravi%C4%8Dov%C3%A1-4b470a210?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRUUGZFhRTZuTSKIsNgvmAQ%3D%3D'>
+					    	<i className="fab fa-linkedin icon2"></i>
+					    </a>
+				    </li>
 			  	</div>
 		    </>
 		)
